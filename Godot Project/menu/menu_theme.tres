@@ -1,0 +1,44 @@
+[gd_resource type="Theme" load_steps=14 format=3 uid="uid://cytrxbif5j6d3"]
+
+[ext_resource type="Texture2D" uid="uid://dbv1iifcgpo68" path="res://menu/tex/menu_checked_tex.tres" id="1_1u78a"]
+[ext_resource type="Texture2D" uid="uid://g3154iy6j05v" path="res://menu/tex/menu_grabber_tex.tres" id="1_vbyxr"]
+[ext_resource type="Texture2D" uid="uid://bte55aqqmwr6k" path="res://menu/tex/menu_tick_tex.tres" id="2_fngbg"]
+[ext_resource type="Texture2D" uid="uid://mpcvbc5ynef1" path="res://menu/tex/menu_unchecked_tex.tres" id="2_sjxx6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rpg8c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iuw80"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qangv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pqm03"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7duw3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8df5f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i5i6f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sanuc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_swolj"]
+
+[resource]
+CheckBox/icons/checked = ExtResource("1_1u78a")
+CheckBox/icons/checked_disabled = ExtResource("1_1u78a")
+CheckBox/icons/unchecked = ExtResource("2_sjxx6")
+CheckBox/icons/unchecked_disabled = ExtResource("2_sjxx6")
+CheckBox/styles/focus = SubResource("StyleBoxEmpty_rpg8c")
+HSlider/icons/grabber = ExtResource("1_vbyxr")
+HSlider/icons/grabber_disabled = ExtResource("1_vbyxr")
+HSlider/icons/grabber_highlight = ExtResource("1_vbyxr")
+HSlider/icons/tick = ExtResource("2_fngbg")
+HSlider/styles/grabber_area = SubResource("StyleBoxEmpty_iuw80")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxEmpty_qangv")
+HSlider/styles/slider = SubResource("StyleBoxFlat_pqm03")
+VScrollBar/styles/grabber = SubResource("StyleBoxEmpty_7duw3")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_8df5f")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_i5i6f")
+VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_sanuc")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_swolj")

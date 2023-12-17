@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://u35rhmn5ikev"]
+
+[ext_resource type="Shader" path="res://common/base.gdshader" id="1_bkghg"]
+[ext_resource type="Texture2D" uid="uid://b5ex8q816sxwt" path="res://objects/Cabinet 1_Cabinet 1 Black and Gold Texture.png" id="2_5g8at"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_bkghg")
+shader_parameter/color_value = Color(1, 1, 1, 1)
+shader_parameter/color_texture = ExtResource("2_5g8at")

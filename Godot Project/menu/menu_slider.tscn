@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6vy6f8skun3d"]
+
+[ext_resource type="Script" path="res://menu/menu_slider.gd" id="1_up2t5"]
+[ext_resource type="Theme" uid="uid://cytrxbif5j6d3" path="res://menu/menu_theme.tres" id="1_utea8"]
+
+[node name="MenuSlider" type="HSlider"]
+custom_minimum_size = Vector2(0, 30)
+size_flags_horizontal = 3
+size_flags_vertical = 2
+theme = ExtResource("1_utea8")
+rounded = true
+ticks_on_borders = true
+script = ExtResource("1_up2t5")
+
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
+[connection signal="focus_exited" from="." to="." method="_on_focus_exited"]

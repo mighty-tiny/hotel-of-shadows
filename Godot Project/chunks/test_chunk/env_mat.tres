@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://dp50p5k21t1my"]
+
+[ext_resource type="Shader" path="res://common/base.gdshader" id="1_8cowg"]
+[ext_resource type="Texture2D" uid="uid://btk2lv63xdiag" path="res://chunks/test_chunk/env_tex.png" id="2_str5g"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_8cowg")
+shader_parameter/color_value = Color(1, 1, 1, 1)
+shader_parameter/color_texture = ExtResource("2_str5g")

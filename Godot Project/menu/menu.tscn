@@ -1,0 +1,366 @@
+[gd_scene load_steps=23 format=3 uid="uid://cfxuv64cc8mio"]
+
+[ext_resource type="Script" path="res://menu/menu.gd" id="1_5tjo6"]
+[ext_resource type="Theme" uid="uid://cytrxbif5j6d3" path="res://menu/menu_theme.tres" id="1_hnkyb"]
+[ext_resource type="Texture2D" uid="uid://crqdcpwg37o2g" path="res://menu/tex/menu_tex.png" id="3_2hrf8"]
+[ext_resource type="Texture2D" uid="uid://b5dd6q8rn5pl6" path="res://menu/tex/menu_start_tex.tres" id="4_r5fcp"]
+[ext_resource type="PackedScene" uid="uid://dblmncfx802mt" path="res://menu/menu_item.tscn" id="4_yq5ko"]
+[ext_resource type="PackedScene" uid="uid://bly4m8plwl0ew" path="res://menu/menu_button.tscn" id="5_tvq6o"]
+[ext_resource type="Texture2D" uid="uid://cj0rhq6m0wvlb" path="res://menu/tex/menu_enter_tex.tres" id="7_n2ike"]
+[ext_resource type="Texture2D" uid="uid://2d75b6b54t6e" path="res://menu/tex/menu_edit_tex.tres" id="8_k415o"]
+[ext_resource type="Texture2D" uid="uid://cepobcksqj0av" path="res://menu/tex/menu_leave_tex.tres" id="9_xpv7n"]
+[ext_resource type="PackedScene" uid="uid://c6vy6f8skun3d" path="res://menu/menu_slider.tscn" id="10_bjte5"]
+[ext_resource type="Texture2D" uid="uid://b06ltktbkt3vc" path="res://menu/tex/menu_screen_tex.tres" id="10_p5gao"]
+[ext_resource type="Texture2D" uid="uid://m461xst60p3a" path="res://menu/tex/menu_blur_tex.tres" id="12_8smoa"]
+[ext_resource type="PackedScene" uid="uid://bdxp7afaftyx2" path="res://menu/menu_checkbox.tscn" id="13_8fthr"]
+[ext_resource type="Texture2D" uid="uid://cgof4wmfbs4uh" path="res://menu/tex/menu_return_tex.tres" id="14_0hrr3"]
+[ext_resource type="Texture2D" uid="uid://ubut744mtsgk" path="res://menu/tex/menu_wide_tex.tres" id="14_8cx28"]
+[ext_resource type="Texture2D" uid="uid://brwcoxxdxkkbi" path="res://menu/tex/menu_pad_tex.tres" id="14_giwt4"]
+[ext_resource type="Texture2D" uid="uid://bc42xpro8lirs" path="res://menu/tex/menu_mouse_tex.tres" id="14_n6n40"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0il4o"]
+atlas = ExtResource("3_2hrf8")
+region = Rect2(0, -8, 320, 60)
+
+[sub_resource type="Animation" id="Animation_hhjhb"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(90, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StartButton:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Main:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_325sw"]
+resource_name = "start"
+length = 5.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.5, 5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(90, -0.25, 0, 0.25, 0, 30, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.5, 4)
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StartButton:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_to_main"
+}]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Main:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(3, 4.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_vhdyo"]
+resource_name = "start_loop"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StartButton:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vnsuy"]
+_data = {
+"RESET": SubResource("Animation_hhjhb"),
+"start": SubResource("Animation_325sw"),
+"start_loop": SubResource("Animation_vhdyo")
+}
+
+[node name="Menu" type="Control"]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_hnkyb")
+script = ExtResource("1_5tjo6")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Title" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_0il4o")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="Animator" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vnsuy")
+}
+
+[node name="StartButton" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("4_r5fcp")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="Main" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.375
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Enter" parent="Main" instance=ExtResource("4_yq5ko")]
+layout_mode = 2
+
+[node name="EnterButton" parent="Main/Enter" instance=ExtResource("5_tvq6o")]
+layout_mode = 2
+texture_normal = ExtResource("7_n2ike")
+
+[node name="Edit" parent="Main" instance=ExtResource("4_yq5ko")]
+layout_mode = 2
+
+[node name="EditButton" parent="Main/Edit" instance=ExtResource("5_tvq6o")]
+layout_mode = 2
+texture_normal = ExtResource("8_k415o")
+
+[node name="Leave" parent="Main" instance=ExtResource("4_yq5ko")]
+layout_mode = 2
+
+[node name="LeaveButton" parent="Main/Leave" instance=ExtResource("5_tvq6o")]
+layout_mode = 2
+texture_normal = ExtResource("9_xpv7n")
+
+[node name="Edit" type="ScrollContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.375
+anchor_right = 1.0
+anchor_bottom = 1.0
+follow_focus = true
+horizontal_scroll_mode = 0
+
+[node name="List" type="VBoxContainer" parent="Edit"]
+layout_mode = 2
+
+[node name="Screen" parent="Edit/List" instance=ExtResource("4_yq5ko")]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Edit/List/Screen"]
+custom_minimum_size = Vector2(80, 30)
+layout_mode = 2
+texture = ExtResource("10_p5gao")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="Control2" type="Control" parent="Edit/List/Screen"]
+layout_mode = 2
+
+[node name="ScreenSlider" parent="Edit/List/Screen" instance=ExtResource("10_bjte5")]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="Edit/List/Screen"]
+custom_minimum_size = Vector2(5, 0)
+layout_mode = 2
+
+[node name="Blur" parent="Edit/List" instance=ExtResource("4_yq5ko")]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Edit/List/Blur"]
+custom_minimum_size = Vector2(80, 30)
+layout_mode = 2
+texture = ExtResource("12_8smoa")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="BlurCheck" parent="Edit/List/Blur" instance=ExtResource("13_8fthr")]
+layout_mode = 2
+
+[node name="Wide" parent="Edit/List" instance=ExtResource("4_yq5ko")]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Edit/List/Wide"]
+custom_minimum_size = Vector2(80, 30)
+layout_mode = 2
+texture = ExtResource("14_8cx28")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="WideCheck" parent="Edit/List/Wide" instance=ExtResource("13_8fthr")]
+layout_mode = 2
+
+[node name="GPad" parent="Edit/List" instance=ExtResource("4_yq5ko")]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Edit/List/GPad"]
+custom_minimum_size = Vector2(80, 30)
+layout_mode = 2
+texture = ExtResource("14_giwt4")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="Control2" type="Control" parent="Edit/List/GPad"]
+layout_mode = 2
+
+[node name="GPadSlider" parent="Edit/List/GPad" instance=ExtResource("10_bjte5")]
+layout_mode = 2
+min_value = 1.0
+max_value = 10.0
+value = 1.0
+tick_count = 10
+
+[node name="Control" type="Control" parent="Edit/List/GPad"]
+custom_minimum_size = Vector2(5, 0)
+layout_mode = 2
+
+[node name="Mouse" parent="Edit/List" instance=ExtResource("4_yq5ko")]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Edit/List/Mouse"]
+custom_minimum_size = Vector2(80, 30)
+layout_mode = 2
+texture = ExtResource("14_n6n40")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="Control2" type="Control" parent="Edit/List/Mouse"]
+layout_mode = 2
+
+[node name="MouseSlider" parent="Edit/List/Mouse" instance=ExtResource("10_bjte5")]
+layout_mode = 2
+min_value = 1.0
+max_value = 10.0
+value = 1.0
+tick_count = 10
+
+[node name="Control" type="Control" parent="Edit/List/Mouse"]
+custom_minimum_size = Vector2(5, 0)
+layout_mode = 2
+
+[node name="Return" parent="Edit/List" instance=ExtResource("4_yq5ko")]
+layout_mode = 2
+
+[node name="ReturnButton" parent="Edit/List/Return" instance=ExtResource("5_tvq6o")]
+layout_mode = 2
+texture_normal = ExtResource("14_0hrr3")
+
+[connection signal="on_startup" from="." to="." method="_on_on_startup"]
+[connection signal="pressed" from="Main/Enter/EnterButton" to="." method="_on_enter_button_pressed"]
+[connection signal="pressed" from="Main/Edit/EditButton" to="." method="_on_edit_button_pressed"]
+[connection signal="pressed" from="Main/Leave/LeaveButton" to="." method="_on_leave_button_pressed"]
+[connection signal="value_changed" from="Edit/List/Screen/ScreenSlider" to="." method="_on_screen_slider_value_changed"]
+[connection signal="toggled" from="Edit/List/Blur/BlurCheck" to="." method="_on_blur_check_toggled"]
+[connection signal="toggled" from="Edit/List/Wide/WideCheck" to="." method="_on_wide_check_toggled"]
+[connection signal="value_changed" from="Edit/List/GPad/GPadSlider" to="." method="_on_g_pad_slider_value_changed"]
+[connection signal="value_changed" from="Edit/List/Mouse/MouseSlider" to="." method="_on_mouse_slider_value_changed"]
+[connection signal="pressed" from="Edit/List/Return/ReturnButton" to="." method="_on_return_button_pressed"]

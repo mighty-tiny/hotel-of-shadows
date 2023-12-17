@@ -1,0 +1,5 @@
+# Godot 4+ specific ignores
+.godot/
+
+# Blender backup files aren't needed.
+*.blend1

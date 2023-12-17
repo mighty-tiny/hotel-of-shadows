@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdxp7afaftyx2"]
+
+[ext_resource type="Script" path="res://menu/menu_checkbox.gd" id="1_d1aiy"]
+[ext_resource type="Theme" uid="uid://cytrxbif5j6d3" path="res://menu/menu_theme.tres" id="1_dv2k5"]
+
+[node name="MenuCheckbox" type="CheckBox"]
+custom_minimum_size = Vector2(30, 30)
+theme = ExtResource("1_dv2k5")
+icon_alignment = 1
+script = ExtResource("1_d1aiy")
+
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
+[connection signal="focus_exited" from="." to="." method="_on_focus_exited"]

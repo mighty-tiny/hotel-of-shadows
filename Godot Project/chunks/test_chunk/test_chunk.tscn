@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://io8xif1p2rwy"]
+
+[ext_resource type="Script" path="res://chunks/world_chunk.gd" id="1_ye15t"]
+[ext_resource type="PackedScene" uid="uid://c8o2nw3yj0mmk" path="res://chunks/test_chunk/env_mdl.glb" id="2_36uqo"]
+[ext_resource type="PackedScene" uid="uid://cf24dcd4xh5cu" path="res://objects/Cabinet 1.glb" id="3_8unp3"]
+
+[node name="TestChunk" type="Node3D"]
+script = ExtResource("1_ye15t")
+
+[node name="env_mdl" parent="." instance=ExtResource("2_36uqo")]
+
+[node name="Cabinet 1" parent="." instance=ExtResource("3_8unp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.04835)

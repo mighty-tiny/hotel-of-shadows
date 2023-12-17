@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvwb0n5l00wuh"]
+
+[ext_resource type="PackedScene" uid="uid://io8xif1p2rwy" path="res://chunks/test_chunk/test_chunk.tscn" id="1_b6smg"]
+[ext_resource type="PackedScene" uid="uid://cyo7kb12v23y1" path="res://player/player.tscn" id="2_ow0aa"]
+
+[sub_resource type="Environment" id="Environment_sxdlh"]
+background_mode = 1
+background_energy_multiplier = 0.5
+ambient_light_source = 2
+ambient_light_energy = 0.0
+
+[node name="Startup" type="Node3D"]
+process_mode = 1
+
+[node name="TestChunk" parent="." instance=ExtResource("1_b6smg")]
+
+[node name="Player" parent="." instance=ExtResource("2_ow0aa")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_sxdlh")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 6, 0)
+spot_range = 10.0

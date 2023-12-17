@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dblmncfx802mt"]
+
+[ext_resource type="Script" path="res://menu/menu_item.gd" id="1_uuaja"]
+[ext_resource type="Texture2D" uid="uid://b50xot4gae3bw" path="res://menu/tex/menu_selected_tex.tres" id="2_r4e1d"]
+
+[node name="MenuItem" type="HBoxContainer"]
+custom_minimum_size = Vector2(320, 30)
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 30.0
+grow_horizontal = 2
+script = ExtResource("1_uuaja")
+
+[node name="SelectedIndicator" type="TextureRect" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+texture = ExtResource("2_r4e1d")
+expand_mode = 1
+stretch_mode = 3

@@ -1,0 +1,68 @@
+[gd_scene load_steps=8 format=3 uid="uid://fi0br00wku4q"]
+
+[ext_resource type="Script" path="res://main/display/display.gd" id="1_lbp5d"]
+[ext_resource type="Shader" path="res://main/display/low_res_effects.gdshader" id="2_7cm76"]
+[ext_resource type="Shader" path="res://main/display/high_res_effects.gdshader" id="3_up8wq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dw40h"]
+shader = ExtResource("2_7cm76")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_r6kwj"]
+viewport_path = NodePath("Viewport")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p1i6y"]
+shader = ExtResource("3_up8wq")
+shader_parameter/blur = true
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_unmr5"]
+viewport_path = NodePath("LowRes")
+
+[node name="Display" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lbp5d")
+
+[node name="Viewport" type="SubViewport" parent="."]
+handle_input_locally = false
+canvas_item_default_texture_filter = 0
+canvas_item_default_texture_repeat = 1
+audio_listener_enable_2d = true
+audio_listener_enable_3d = true
+size = Vector2i(640, 480)
+
+[node name="LowRes" type="SubViewport" parent="."]
+handle_input_locally = false
+size = Vector2i(640, 480)
+
+[node name="Texture" type="TextureRect" parent="LowRes"]
+texture_filter = 2
+texture_repeat = 1
+material = SubResource("ShaderMaterial_dw40h")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("ViewportTexture_r6kwj")
+expand_mode = 1
+
+[node name="AspectFitter" type="AspectRatioContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+ratio = 1.3333
+
+[node name="Texture" type="TextureRect" parent="AspectFitter"]
+texture_filter = 2
+texture_repeat = 1
+material = SubResource("ShaderMaterial_p1i6y")
+layout_mode = 2
+texture = SubResource("ViewportTexture_unmr5")
+expand_mode = 1

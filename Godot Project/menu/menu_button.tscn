@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bly4m8plwl0ew"]
+
+[ext_resource type="Script" path="res://menu/menu_button.gd" id="1_d2tlm"]
+[ext_resource type="Texture2D" uid="uid://b5dd6q8rn5pl6" path="res://menu/tex/menu_start_tex.tres" id="1_t4uad"]
+
+[node name="MenuButton" type="TextureButton"]
+custom_minimum_size = Vector2(80, 30)
+texture_normal = ExtResource("1_t4uad")
+ignore_texture_size = true
+stretch_mode = 3
+script = ExtResource("1_d2tlm")
+
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
+[connection signal="focus_exited" from="." to="." method="_on_focus_exited"]
