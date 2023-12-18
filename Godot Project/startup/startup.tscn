@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dvwb0n5l00wuh"]
-
-[ext_resource type="PackedScene" uid="uid://buml3rb5hoiwp" path="res://chunks/intro_chunk/intro_chunk.tscn" id="1_hubft"]
-
-[node name="Startup" type="Node3D"]
-process_mode = 1
-
-[node name="IntroChunk" parent="." instance=ExtResource("1_hubft")]

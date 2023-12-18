@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_kilkt"]
 [ext_resource type="PackedScene" uid="uid://fi0br00wku4q" path="res://main/display/display.tscn" id="1_pni5a"]
-[ext_resource type="PackedScene" uid="uid://dvwb0n5l00wuh" path="res://startup/startup.tscn" id="2_0n81t"]
 [ext_resource type="PackedScene" uid="uid://cfxuv64cc8mio" path="res://menu/menu.tscn" id="2_6y4va"]
 [ext_resource type="Texture2D" uid="uid://bd2r6kechkfj8" path="res://main/godot.png" id="2_h27ie"]
+[ext_resource type="PackedScene" uid="uid://bbsfj72eq2cwo" path="res://world/world.tscn" id="3_l8577"]
 
 [node name="Main" type="Control"]
 process_mode = 3
@@ -15,7 +15,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_kilkt")
-initial_scenes = Array[PackedScene]([ExtResource("2_6y4va"), ExtResource("2_0n81t")])
+initial_scenes = Array[PackedScene]([ExtResource("2_6y4va"), ExtResource("3_l8577")])
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 1

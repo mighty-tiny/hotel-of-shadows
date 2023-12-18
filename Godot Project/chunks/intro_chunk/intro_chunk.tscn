@@ -1,171 +1,19 @@
-[gd_scene load_steps=7 format=3 uid="uid://buml3rb5hoiwp"]
+[gd_scene load_steps=6 format=3 uid="uid://buml3rb5hoiwp"]
 
 [ext_resource type="PackedScene" uid="uid://d0cfmryi7ocp1" path="res://chunks/intro_chunk/env_mdl.glb" id="1_lba8v"]
+[ext_resource type="Script" path="res://chunks/world_chunk.gd" id="1_mmg3l"]
+[ext_resource type="Script" path="res://world/hotel_area.gd" id="2_tdhxm"]
+[ext_resource type="PointMesh" uid="uid://jxjsnpwj153t" path="res://chunks/intro_chunk/snow_mdl.tres" id="3_vieq3"]
 
-[sub_resource type="Environment" id="Environment_n06w7"]
-background_mode = 1
-background_energy_multiplier = 0.0
-ambient_light_source = 2
-ambient_light_color = Color(1, 1, 1, 1)
-
-[sub_resource type="PointMesh" id="PointMesh_1umq2"]
-
-[sub_resource type="Animation" id="Animation_lhrpu"]
-resource_name = "loop"
-length = 10.0
-loop_mode = 1
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Camera3D:rotation:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(-0.102974, -0.25, 0, 0.25, 0, -0.174533, -0.25, 0, 0.25, 0, -0.102974, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 5, 10)
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Camera3D:rotation:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(0.132645, -0.25, 0, 0.25, 0, 0.132645, -0.25, 0, 0.25, 0, 0.132645, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 5, 10)
-}
-tracks/2/type = "bezier"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Camera3D:rotation:z")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(0.102974, -0.25, 0, 0.25, 0, 0.102974, -0.25, 0, 0.25, 0, 0.102974, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 5, 10)
-}
-tracks/3/type = "bezier"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Camera3D:position:x")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 5, 10)
-}
-tracks/4/type = "bezier"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Camera3D:position:y")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(0.950169, -0.25, 0, 0.25, 0, 1.1, -0.25, 0, 0.25, 0, 0.950169, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 5, 10)
-}
-tracks/5/type = "bezier"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Camera3D:position:z")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(6.05767, -0.25, 0, 0.25, 0, 5.9, -0.25, 0, 0.25, 0, 6.05767, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 5, 10)
-}
-
-[sub_resource type="Animation" id="Animation_qqrtc"]
-length = 0.001
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Camera3D:rotation:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-0.102974, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Camera3D:rotation:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0.132645, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/2/type = "bezier"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Camera3D:rotation:z")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0.102974, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/3/type = "bezier"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Camera3D:position:x")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/4/type = "bezier"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Camera3D:position:y")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0.950169, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/5/type = "bezier"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Camera3D:position:z")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(6.05767, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_5yw46"]
-_data = {
-"RESET": SubResource("Animation_qqrtc"),
-"loop": SubResource("Animation_lhrpu")
-}
+[sub_resource type="BoxShape3D" id="BoxShape3D_kbv5d"]
+size = Vector3(23.5908, 7.02002, 19.959)
 
 [node name="IntroChunk" type="Node3D"]
 process_mode = 3
+script = ExtResource("1_mmg3l")
+spawn_point = NodePath("Spawn")
 
 [node name="env_mdl" parent="." instance=ExtResource("1_lba8v")]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_n06w7")
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.984567, -0.115413, 0.131556, 0.102248, 0.989434, 0.102793, -0.142029, -0.0877549, 0.985965, 0, 0.950169, 6.05767)
 
 [node name="CPUParticles3D" type="CPUParticles3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.473279, 2.2707, 4.82165)
@@ -173,7 +21,7 @@ amount = 128
 lifetime = 10.0
 preprocess = 2.0
 speed_scale = 0.5
-mesh = SubResource("PointMesh_1umq2")
+mesh = ExtResource("3_vieq3")
 gravity = Vector3(0, -5, 0)
 initial_velocity_min = 1.0
 initial_velocity_max = 3.0
@@ -187,7 +35,7 @@ amount = 128
 lifetime = 10.0
 preprocess = 2.0
 speed_scale = 0.5
-mesh = SubResource("PointMesh_1umq2")
+mesh = ExtResource("3_vieq3")
 gravity = Vector3(0, -5, 0)
 initial_velocity_min = 1.0
 initial_velocity_max = 3.0
@@ -201,7 +49,7 @@ amount = 128
 lifetime = 10.0
 preprocess = 2.0
 speed_scale = 0.5
-mesh = SubResource("PointMesh_1umq2")
+mesh = ExtResource("3_vieq3")
 gravity = Vector3(0, -5, 0)
 initial_velocity_min = 1.0
 initial_velocity_max = 3.0
@@ -215,7 +63,7 @@ amount = 128
 lifetime = 10.0
 preprocess = 2.0
 speed_scale = 0.5
-mesh = SubResource("PointMesh_1umq2")
+mesh = ExtResource("3_vieq3")
 gravity = Vector3(0, -5, 0)
 initial_velocity_min = 1.0
 initial_velocity_max = 3.0
@@ -229,7 +77,7 @@ amount = 128
 lifetime = 10.0
 preprocess = 1.0
 speed_scale = 0.5
-mesh = SubResource("PointMesh_1umq2")
+mesh = ExtResource("3_vieq3")
 gravity = Vector3(0, -5, 0)
 initial_velocity_min = 1.0
 initial_velocity_max = 3.0
@@ -237,8 +85,17 @@ tangential_accel_max = 5.0
 damping_min = 2.0
 damping_max = 5.0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_5yw46")
-}
-autoplay = "loop"
+[node name="HotelArea3D" type="Area3D" parent="."]
+process_mode = 3
+script = ExtResource("2_tdhxm")
+fog_end = 8.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HotelArea3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.937103, 3.01001, -0.737213)
+shape = SubResource("BoxShape3D_kbv5d")
+
+[node name="Spawn" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.425501, -1, 6.112)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
