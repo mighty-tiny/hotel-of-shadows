@@ -7,6 +7,7 @@ radius = 0.3
 height = 1.7
 
 [node name="Player" type="CharacterBody3D"]
+process_mode = 1
 script = ExtResource("1_ocllf")
 
 [node name="Body" type="CollisionShape3D" parent="."]
@@ -15,5 +16,3 @@ shape = SubResource("CapsuleShape3D_pk0kc")
 
 [node name="Head" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
-
-[node name="Camera3D" type="Camera3D" parent="Head"]

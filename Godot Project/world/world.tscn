@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbsfj72eq2cwo"]
+
+[ext_resource type="Script" path="res://world/world.gd" id="1_s06gn"]
+[ext_resource type="PackedScene" uid="uid://dhs1x32tp31ya" path="res://player/game_camera.tscn" id="2_827cm"]
+
+[sub_resource type="Environment" id="Environment_h0mdv"]
+background_mode = 1
+ambient_light_source = 1
+ambient_light_energy = 0.0
+
+[node name="World" type="Node3D"]
+process_mode = 3
+script = ExtResource("1_s06gn")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_h0mdv")
+
+[node name="GameCamera" parent="." instance=ExtResource("2_827cm")]

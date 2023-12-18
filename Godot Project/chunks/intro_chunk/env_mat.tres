@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://dr1iajqodk0w4"]
+
+[ext_resource type="Shader" path="res://common/base.gdshader" id="1_pdtoh"]
+[ext_resource type="Texture2D" uid="uid://jwwf6p0rc8kn" path="res://chunks/intro_chunk/end_tex.png" id="2_fpko5"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_pdtoh")
+shader_parameter/color_value = Color(1, 1, 1, 1)
+shader_parameter/color_texture = ExtResource("2_fpko5")

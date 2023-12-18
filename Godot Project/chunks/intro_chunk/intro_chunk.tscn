@@ -1,0 +1,101 @@
+[gd_scene load_steps=6 format=3 uid="uid://buml3rb5hoiwp"]
+
+[ext_resource type="PackedScene" uid="uid://d0cfmryi7ocp1" path="res://chunks/intro_chunk/env_mdl.glb" id="1_lba8v"]
+[ext_resource type="Script" path="res://chunks/world_chunk.gd" id="1_mmg3l"]
+[ext_resource type="Script" path="res://world/hotel_area.gd" id="2_tdhxm"]
+[ext_resource type="PointMesh" uid="uid://jxjsnpwj153t" path="res://chunks/intro_chunk/snow_mdl.tres" id="3_vieq3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kbv5d"]
+size = Vector3(23.5908, 7.02002, 19.959)
+
+[node name="IntroChunk" type="Node3D"]
+process_mode = 3
+script = ExtResource("1_mmg3l")
+spawn_point = NodePath("Spawn")
+
+[node name="env_mdl" parent="." instance=ExtResource("1_lba8v")]
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.473279, 2.2707, 4.82165)
+amount = 128
+lifetime = 10.0
+preprocess = 2.0
+speed_scale = 0.5
+mesh = ExtResource("3_vieq3")
+gravity = Vector3(0, -5, 0)
+initial_velocity_min = 1.0
+initial_velocity_max = 3.0
+tangential_accel_max = 5.0
+damping_min = 2.0
+damping_max = 5.0
+
+[node name="CPUParticles3D4" type="CPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.96036, 2.1146, 4.82165)
+amount = 128
+lifetime = 10.0
+preprocess = 2.0
+speed_scale = 0.5
+mesh = ExtResource("3_vieq3")
+gravity = Vector3(0, -5, 0)
+initial_velocity_min = 1.0
+initial_velocity_max = 3.0
+tangential_accel_max = 5.0
+damping_min = 2.0
+damping_max = 5.0
+
+[node name="CPUParticles3D2" type="CPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.718171, 2.2707, 4.35413)
+amount = 128
+lifetime = 10.0
+preprocess = 2.0
+speed_scale = 0.5
+mesh = ExtResource("3_vieq3")
+gravity = Vector3(0, -5, 0)
+initial_velocity_min = 1.0
+initial_velocity_max = 3.0
+tangential_accel_max = 5.0
+damping_min = 2.0
+damping_max = 5.0
+
+[node name="CPUParticles3D5" type="CPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.718171, 2.2707, 4.35413)
+amount = 128
+lifetime = 10.0
+preprocess = 2.0
+speed_scale = 0.5
+mesh = ExtResource("3_vieq3")
+gravity = Vector3(0, -5, 0)
+initial_velocity_min = 1.0
+initial_velocity_max = 3.0
+tangential_accel_max = 5.0
+damping_min = 2.0
+damping_max = 5.0
+
+[node name="CPUParticles3D3" type="CPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.42979, 2.59504, 5.08009)
+amount = 128
+lifetime = 10.0
+preprocess = 1.0
+speed_scale = 0.5
+mesh = ExtResource("3_vieq3")
+gravity = Vector3(0, -5, 0)
+initial_velocity_min = 1.0
+initial_velocity_max = 3.0
+tangential_accel_max = 5.0
+damping_min = 2.0
+damping_max = 5.0
+
+[node name="HotelArea3D" type="Area3D" parent="."]
+process_mode = 3
+script = ExtResource("2_tdhxm")
+fog_end = 8.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HotelArea3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.937103, 3.01001, -0.737213)
+shape = SubResource("BoxShape3D_kbv5d")
+
+[node name="Spawn" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.425501, -1, 6.112)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
