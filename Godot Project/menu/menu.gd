@@ -69,6 +69,10 @@ func _maybe_leave_menu():
 
 var _has_menu_start: bool = false
 func _process(_delta):
+	if _current_state == MenuState.PRE:
+		$Title.size.x = size.x
+		$Title.position.y = (size.y / 2.0) - ($Title.size.y / 2.0)
+	
 	if get_tree().paused and _current_state == MenuState.PLAYING:
 		_go_to_menu()
 	
@@ -100,6 +104,8 @@ func _on_config_updated():
 	MOUSE_SLIDER.set_value_no_signal(Config.mouse_sens)
 
 func _ready():
+	$Title.position = Vector2(0, 0)
+	
 	if OS.get_name() == "Web":
 		MAIN.remove_child(LEAVE_ITEM)
 	SCREEN_SLIDER.tick_count = DisplayServer.get_screen_count() + 1

@@ -26,7 +26,7 @@ func _physics_process(delta):
 	var looking = Input.get_vector("look_left", "look_right", "look_up", "look_down")
 	if looking.length_squared() > 1.0:
 		looking = looking.normalized()
-	_rotate_head(looking * _mapSensitivity(Config.pad_sens, 1, 3) * delta)
+	_rotate_head(looking * _mapSensitivity(Config.pad_sens, 0.1, 5) * delta)
 
 	if not is_on_floor():
 		velocity.y -= gravity * delta
