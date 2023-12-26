@@ -53,18 +53,28 @@ func _process(delta):
 	CAM.global_position = player.HEAD.global_position
 	CAM.global_rotation = player.HEAD.global_rotation
 
-func _spawn_first_chunk(chunk: PackedScene):
+var _current_chunk: Node = null
+
+func change_chunk(chunk: PackedScene):
 	var c: WorldChunk = chunk.instantiate()
 	
-	player = preload("res://player/player.tscn").instantiate()
-	add_child(player)
+	player.current_start = Player.PlayerState.CUTSCENE
+	
+	if _current_chunk != null:
+		remove_child(_current_chunk)
+	
+	_current_chunk = c
 	
 	add_child(c)
 	
 	var s := c.get_node(c.spawn_point)
 	player.global_position = s.global_position
 	player.global_rotation = s.global_rotation
+	
+	player.current_start = c.initial_state
 
 func _ready():
 	WORLD = self
-	_spawn_first_chunk(preload("res://chunks/intro_chunk/intro_chunk.tscn"))
+	player = preload("res://player/player.tscn").instantiate()
+	add_child(player)
+	change_chunk(preload("res://chunks/intro_chunk/intro_chunk.tscn"))

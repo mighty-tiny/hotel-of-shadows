@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://ybi078cydjva"]
+
+[ext_resource type="Script" path="res://chunks/world_chunk.gd" id="1_g4deb"]
+[ext_resource type="PackedScene" uid="uid://bgijmil60l3so" path="res://objects/Lobby.glb" id="2_4uop2"]
+[ext_resource type="Script" path="res://world/hotel_area.gd" id="3_dri8q"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_71njc"]
+size = Vector3(74.5027, 8.35168, 54.5993)
+
+[node name="LobbyChunk" type="Node3D"]
+script = ExtResource("1_g4deb")
+initial_state = 1
+spawn_point = NodePath("Spawn Point")
+
+[node name="Lobby" parent="." instance=ExtResource("2_4uop2")]
+
+[node name="Spawn Point" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.895665, 18.9938)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="HotelArea3D" type="Area3D" parent="."]
+script = ExtResource("3_dri8q")
+fog_end = 8.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HotelArea3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.68455, 3.67584, 0.427025)
+shape = SubResource("BoxShape3D_71njc")

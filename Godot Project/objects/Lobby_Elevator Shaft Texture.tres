@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://dco50ias1b2ad"]
+
+[ext_resource type="Shader" path="res://common/base.gdshader" id="1_gusqh"]
+[ext_resource type="Texture2D" uid="uid://1nwr6tqfd171" path="res://objects/Lobby_Elevator Shaft Texture.png" id="2_sscnu"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_gusqh")
+shader_parameter/color_value = Color(1, 1, 1, 1)
+shader_parameter/color_texture = ExtResource("2_sscnu")

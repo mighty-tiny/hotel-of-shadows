@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://dfegpx74iayyr"]
+
+[ext_resource type="Shader" path="res://common/base.gdshader" id="1_ib6c6"]
+[ext_resource type="Texture2D" uid="uid://c1mt167shvcij" path="res://objects/Lobby_Tile 1 Texture 5.png" id="2_5gkgu"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_ib6c6")
+shader_parameter/color_value = Color(1, 1, 1, 1)
+shader_parameter/color_texture = ExtResource("2_5gkgu")
