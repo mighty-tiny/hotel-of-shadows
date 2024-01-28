@@ -56,6 +56,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall Segment 2 Door 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7070499570025956363, guid: 5375e8b2f14bc1b41ae4d45a58ff13e2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8064918239090253261, guid: 5375e8b2f14bc1b41ae4d45a58ff13e2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
