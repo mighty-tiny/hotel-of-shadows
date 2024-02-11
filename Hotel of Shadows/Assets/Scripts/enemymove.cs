@@ -14,7 +14,7 @@ public class enemymove : MonoBehaviour
 
     private Transform Player;
 
-
+    public Animation ghostIdle;
 
     private NavMeshAgent agent;
 
@@ -53,7 +53,7 @@ public class enemymove : MonoBehaviour
 
             transform.position += transform.forward * MoveSpeed * Time.deltaTime;
 
-
+            ghostIdle.Play();
             if (Vector3.Distance(transform.position, Player.position) <= MaxDist)
             {
                 Destroy(this.gameObject);
