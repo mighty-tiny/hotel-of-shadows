@@ -5,21 +5,22 @@ public class Flashlight : MonoBehaviour
 {
 	public Light flashlightLightSource;
 	bool lightOn = true;
-    float lightDrain = 0.1f;
+	public float lightDrain = 0.1f;
     private static float batteryLife = 0;
-	float maxBatteryLife = 2.0f;
+	public float maxBatteryLife = 2.0f;
     
     private static float batteryPower = 1;
 
-	float barDisplay = 0;
+	public float barDisplay = 0;
 	Vector2 pos = new Vector2(20,40);
 	Vector2 size = new Vector2(60,20);
-	Texture2D progressBarEmpty;
-	Texture2D progressBarFull;
+	public Texture2D progressBarEmpty;
+	public Texture2D progressBarFull;
 
-	AudioClip soundTurnOn;
-	AudioClip soundTurnOff;
+	public AudioClip soundTurnOn;
+	public AudioClip soundTurnOff;
     
+
     
     void Start()
 	{
