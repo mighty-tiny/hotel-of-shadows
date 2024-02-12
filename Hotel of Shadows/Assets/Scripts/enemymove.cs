@@ -53,7 +53,7 @@ public class enemymove : MonoBehaviour
 
             transform.position += transform.forward * MoveSpeed * Time.deltaTime;
 
-            ghostIdle.Play();
+            //ghostIdle.Play();
             if (Vector3.Distance(transform.position, Player.position) <= MaxDist)
             {
                 Destroy(this.gameObject);

@@ -10,10 +10,11 @@ public class enemysound : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)//Check if something has entered the trigger ( and declares this object in "other" )
 	{
-		if (other.CompareTag( Player.tag)) //Checks if player is in trigger
+		if (other.CompareTag("Player")) //Checks if player is in trigger
 		{
+			PlayerMovement.Lost = true;
 			audio.PlayOneShot(scareSound);
-
+			Debug.Log("gg");
 		}
 	}
 }
