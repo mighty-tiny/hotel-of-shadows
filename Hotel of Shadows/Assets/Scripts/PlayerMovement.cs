@@ -35,6 +35,8 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody rb;
 
+    [Header("Lose")]
+    public static bool Lost;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -60,7 +62,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        MovePlayer();
+        if (!Lost)
+            MovePlayer();
+
     }
 
     private void MyInput()
